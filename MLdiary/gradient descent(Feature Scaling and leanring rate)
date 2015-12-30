@@ -1,0 +1,29 @@
+Feature Scaling:
+Idea: Make sure are no a similar scale
+Concretely, if the feature x1 is a value in the range (0-2000),and feature x2 is a value in the range (1-5),
+we could make x1 = x1 / 2000, x2 = x2 / 5
+that makes x1 and x2 in the same range(0-1)
+
+In formly, performing Feature Sacling is that get every feature into approximately a -1 <= xi <= 1 range.
+
+it's not all the feature needed to perform this trick.If the range of feature is close to the range[-1,1], then these features need not to perform it.
+only if the feature is very large than this range of [-1,1], we could use this trick.
+
+
+Mean normalization:
+Replace xi with xi-ui to make features have apporximately zero mean
+such as: x1 = (x1 - u1) / (max(x1)-min(x2)), x2 = (x2 - u2) /(max(x1) - min(x2)) 
+
+the Feature Scaling is aim to run gradient descent quite faster.
+
+When performing the gradient descent, we also could plot a 2-D curve that the axis of x is the number of iteration and the axis of y is the value of cost function J(theta). This curve will tell you that whether or not gradient descent has converged.
+Looing at this figure can also tell you or give you an advance warning if maybe gradient descent is not working correctly!
+
+Learning Rate:
+Use smaller alpha!!
+For sufficiently small alpha, J(theta) should decrese on every iteration.
+But if alpha is to small, gradient descent can be slow to converge.
+If alpha is to large: J(theta) may not decrease on every iteration; may not converge.
+
+In practice, to choose alpha, try
+     ..., 0.001, ,0.01, ,0.1, ,1,...
