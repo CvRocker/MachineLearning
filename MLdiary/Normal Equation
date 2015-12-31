@@ -1,0 +1,29 @@
+When should you use Normal Equation and the intuition about what the method does:
+
+theta = (X'X)-1X'y
+
+Normal Equation is a alternative of gradient descent for linear regression.
+
+using normal equation to compute the optima, the Feature scaling is not necessary 
+
+When should you use Normal Equation or Gradient Descent:
+Suppose we have om training examples, n features.
+
+Disadvantage:
+Gradient Descent:
+Need to choose alpha; Needs many iterations.
+
+Normal Equation:
+Need to compute (X'X)-1, because computing the inverse matrix is cube time, it's very time comsuming!!
+Slow if n is large
+
+Advantage:
+Gradient Descent:
+Works well even when n is large.
+Normal Equation:
+No need to choose alpha
+Don't need to iterate.
+
+Summary:
+if the features n is too large, the Gradient Descent maybe a good choice, and if n is small such as 100, 1000, 10000 and so on, the Normal Equation can compute very faster!
+
