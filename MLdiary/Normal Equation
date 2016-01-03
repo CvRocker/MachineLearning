@@ -27,3 +27,11 @@ Don't need to iterate.
 Summary:
 if the features n is too large, the Gradient Descent maybe a good choice, and if n is small such as 100, 1000, 10000 and so on, the Normal Equation can compute very faster!
 
+
+Additional:
+What if X'X is non-invertible?
+the most common causes is the following two:
+1.Redundant features(linearly dependent).
+2.Too many features(e.g. m <= n).
+
+delete some features, or use regularization.
