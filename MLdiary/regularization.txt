@@ -1,0 +1,43 @@
+Overfitting:
+If we have too many features, the learnd hypothesis my fit the training set very well
+(J(theta) nearly equal to 0), but fail to generalize to new examples.
+
+Addressing overfitting:
+1.Reduce number of features.
+		-- Manually select with features to keep;
+		-- Model selection algorithm
+
+2.Regularization.
+		-- Keep all the features, but reduce magnitude/value of parameters theta_j;
+		-- Works well when we have a lot of features, each of which contributes a bit to predicting y.
+		
+		
+
+Regularization
+Samll values for parameters theta0, theta1, theta2, ...... , thetaN
+			-- it will cause "simpler" hyphothesis
+			-- Less prone to overfitting
+			
+
+for examples:
+Housing: 
+	-- Features: x1, x2, ......, x100
+	-- Parameters: theta0, theta1, theta2, ......, theta100
+	
+The regularization that what we will going to do is modify the cost function to shrink all of these 
+parameters. To add the term of (lambda * sum(theta1 up to theta100).
+The term of addition is regularization term.
+
+like so:
+J(theta) = 1/2m * {sum(h(x_i) - y_i)^2 + lambda * sum(theta1^2 up to theta100^2)}(note£ºi is from 1 up to m)
+
+the lambda here is calld regularization parameter.
+What the lambda does is to control a trade off between two different goal therefore keeping the hyphothesis 
+relatively simple to avoid overfitting.
+The first goal is to capture the we would like to fit the training data well. 
+The second goal we want to keep the parameters small.
+
+if we penalize the parameters to heavily(e.g. lambda is to large), 
+this hyphothesis is just a horizontal line. This is the example of "underfitting."
+
+				

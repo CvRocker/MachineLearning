@@ -1,0 +1,9 @@
+Multi-logistic regression:
+
+this also calld one-versus-all/one-versus-rest.
+
+procedure:
+Train a logistic regression classifier h_i_(x) for each class i to predict the probability that y = i.
+(When this step is completed, we will get i number classifiers)
+Finally, to make a prediction. When given	a new input x,to run all classifiers and pick the class i that
+maximizes the all clssifiers!

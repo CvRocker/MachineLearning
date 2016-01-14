@@ -1,0 +1,53 @@
+logistic regression is a classification algorithm. And it is a very powerful and wildly used classification 
+algorithm in the world!
+
+h(x) = g(theta'x)
+g(z) = 1/(1 + e^-z), g(z) is a sigmod function.
+
+the h(x) could be interpreted as the probability of P(y = 1|x;theta)
+
+Suppose predict "y = 1 if h(x) >= 0.5"
+        predict "y = 0 if h(x) < 0.5"
+        
+
+As the plot of sigmod function, the g of z will greater than 0.5 whenever z is positive.
+
+For example:
+theta'x = theta0 + theta1 * x1 + theta2 * x2
+
+the h(x) >= 0.5 when theta0 + theta1 * x1 + theta2 * x2 >= 0 
+the h(x) < 0.5 when theta0 + theta1 * x1 + theta2 * x2 < 0 
+
+Decision Boundary is a property of hypothesis.
+
+
+
+
+How to automatically choose the paramaters theta so that giving the training set 
+we could automatically fit the paramaters to fit the data.
+
+
+Cost function:
+In logistic regression, we use another cost function instead of the square cost function.Because, the h(x) isn't
+a convex function.J(theta) will has a lots of local optima if we use the square cost function.
+
+In logistic regression we choose the follow cost function:
+Cost(h(x), y) = -log(h(x))   if y = 1;
+                -log(1-h(x)) if y = 0;
+                
+the compression of Cost(h(x), y) = -ylog(h(x)) - (1-y)log(1-h(x))(y = {0,1})
+
+this cost function can be interpreted by two part:
+y = 1 and y = 0;
+
+if y = 1 and h(x) = 1£¬then the cost is 0;
+and the cost will be infinity if h(x) = 0 and y = 1.
+(that is that predict P(y = 1|x;theta) = 0, we'll penalize the algorithm by a very large cost!!)
+
+as similar with below, the cost will be plus infinity if y = 0 and h(x) equal 1.
+The final Cost Function J(theta) is:
+J(theta) = -1/m * sum(y_i * log(h(x_i) + (1-y_i) * log(1-h(x_i))
+
+
+Yet we have a lot of feature that in different range, we also could apply the feature scaling to this feature
+to makes the gradient descent run faster for logistic regression.
