@@ -29,7 +29,7 @@ parameters. To add the term of (lambda * sum(theta1 up to theta100).
 The term of addition is regularization term.
 
 like so:
-J(theta) = 1/2m * {sum(h(x_i) - y_i)^2 + lambda * sum(theta1^2 up to theta100^2)}(note£ºi is from 1 up to m)
+J(theta) = 1/2m * {sum(h(x_i) - y_i)^2 + lambda * sum(theta1^2 up to theta100^2)}(note:i is from 1 up to m)
 
 the lambda here is calld regularization parameter.
 What the lambda does is to control a trade off between two different goal therefore keeping the hyphothesis 
